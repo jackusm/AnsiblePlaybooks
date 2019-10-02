@@ -7,7 +7,13 @@ title() {
 }
 
 title "Install Ansible"
-sudo apt install software-properties-common -y
-sudo apt-add-repository ppa:ansible/ansible -y
+os_string=`cat /etc/issue`
+
+if [[ $os_string == *"Kali"* ]]; then
+	echo "Detected Kali,  add ansible repository"
+	sudo apt install software-properties-common -y
+	sudo apt-add-repository ppa:ansible/ansible -y
+fi
+
 sudo apt update
 sudo apt install curl ansible -y
