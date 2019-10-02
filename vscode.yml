@@ -1,0 +1,15 @@
+- name: vim
+  hosts: servers
+  roles:
+      - role: gantsign.visual-studio-code
+        users:
+              - username: root
+                visual_studio_code_extensions:
+                  - vscode.vim
+                visal_studio_code_settings: {
+                  "editor.rulers": [120],
+                  "editor.renderWhitespace": true,
+                  "editor.lineNumbers": "relative",
+                  "editor.minimap.enabled": false
+                }
+              
