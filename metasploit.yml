@@ -16,16 +16,16 @@
       shell: rvm install ruby-`(cat .ruby-version)`
       args:
         chdir: "{{ ansible_env.HOME }}/Tools/metasploit"
-        executable: /usr/bin/fish
+        executable: /usr/bin/zsh
 
     - name: Install Bundler
       shell: gem install bundler
       args:
         chdir: "{{ ansible_env.HOME }}/Tools/metasploit"
-        executable: /usr/bin/fish
+        executable: /usr/bin/zsh
 
     - name: Install Gems
       shell: bundle install
       args:
         chdir: "{{ ansible_env.HOME }}/Tools/metasploit"
-        executable: /usr/bin/fish
+        executable: /usr/bin/zsh
