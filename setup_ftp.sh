@@ -10,7 +10,7 @@ sudo mkdir "/home/$user/ftp"
 sudo chown nobody:nogroup "/home/$user/ftp"
 sudo chmod a-w "/home/$user/ftp"
 sudo mkdir "/home/$user/ftp/files"
-sudo chown "$user:$user" "$HOME/ftp/files"
+sudo chown "$user:$user" "$HOME/ftp/files" #fix: need permission to actually upload
 echo "write_enable=YES" | sudo tee -a /etc/vsftpd.conf
 echo "chroot_local_user=YES" | sudo tee -a /etc/vsftpd.conf
 echo "user_sub_token=$USER" | sudo tee -a /etc/vsftpd.conf
