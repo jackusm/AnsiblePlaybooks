@@ -1,0 +1,13 @@
+- name: pwndbg
+  hosts: all
+  tasks:
+
+    - name: Clone Repository
+      git:
+        repo: https://github.com/pwndbg/pwndbg
+        dest: "{{ ansible_env.HOME }}/Tools/pwndbg"
+    - name: Run pwndbg setupscript
+      shell: ./setup.sh
+      args:
+        chdir: "{{ ansible_env.HOME }}/Tools/pwndbg"
+        executable: /usr/bin/zsh

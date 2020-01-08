@@ -25,6 +25,9 @@ title "Install vim"
 sudo ansible-galaxy install franklinkim.vim --force
 sudo ansible-playbook -i "localhost," -c local ./vim.yml
 
+title "Install pwndbg"
+sudo ansible-playbook -i "localhost," -c local ./pwndbg.yml
+
 
 
 
