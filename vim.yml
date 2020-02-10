@@ -1,0 +1,10 @@
+- hosts: all
+  sudo: yes
+  roles:
+       - roles: franklinkim.vim
+  vars:
+    vim_config:
+      - 'set tabstop=2'
+      - 'set shiftwidth=2'
+      - 'set number relativenumber'
+      - 'syntax enable'
